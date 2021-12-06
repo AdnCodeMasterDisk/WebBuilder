@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder</title>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!--Material icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Waves css-->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!--Theme-->
+    <link rel="stylesheet" href="css/theme.css">
+
+</head>
+
+<body>
+
+    <div class="global w80" id="global">
+        <div class="contrender" id="rencode">
+            <iframe name="frame" frameborder="0" class="renderframe resz" id="renderframe">
+
+            </iframe>
+
+            <iframe name="framemobile" frameborder="0" class="renderframe hide" id="renderframemobile">
+
+            </iframe>
+        </div>
+
+        <div class="codeeditoradd" id="addcode">
+
+        </div>
+
+        <div class="codeeditoraddmobile hide" id="addcodemobile">
+
+        </div>
+    </div>
+
+    <div class="drawer pr fh w15 bgc3 e2" style="top: 0px; " id="drawer">
+        <div class="row">
+
+            <div class="boxclass w100 bgc1 fh mt44 zi100 " id="leftpanel">
+                <div class="w90 ma">
+                    <p class="body3 fc3 tal">Look repo in <a href="https://github.com/AdnCodeMasterDisk/Waves"
+                            target="_black"><b class="fc4 body3">Github</b></a> or <b class="fc4 pointer"
+                            onclick="clone()">Clone</b> </p>
+                    <p class="body3 fc3 tal">Copy the basic <span class="fc4 pointer"
+                            onclick="template()">Template</span> to dash.</p>
+                    <p class="body3 fc3 tal">Look the <a class="fc4 body3 i"
+                            href="https://www.waves.websm.co/">Documentation</a></p>
+
+                    <p class="body3 fc4 tac mt10 mb10 fw5">Common Class</p>
+
+                    <div class="row w100  mb10 jcs faic">
+                        <span class="material-icons fc4">view_quilt</span>
+                        <p class="body3 fc4 tal ml10">Layout</p>
+                    </div>
+
+                    <p class="body3 fc3 ml10 tal">width: <span class="fc4">.w</span></p>
+                    <p class="body3 fc3 ml10 tal">width adaptive: <span class="fc4">.wx .wl .wm .ws</span></p>
+                    <p class="body3 fc3 ml10 tal">height full <span class="fc4">.fh</span></p>
+                    <p class="body3 fc3 ml10 tal">Cont in row <span class="fc4">.row</span></p>
+
+                    <div class="w100 pt10 pb10"></div>
+
+                    <div class="row w100 mb10  jcs faic">
+                        <span class="material-icons fc4">art_track</span>
+                        <p class="body3 fc4 tal ml10">Flex</p>
+                    </div>
+
+                    <p class="body3 fc3 ml10 tal"> Display in flex <span class="fc4">.df</span></p>
+                    <p class="body3 fc3 ml10 tal"> flex-direction:row <span class="fc4">.frw</span></p>
+                    <p class="body3 fc3 ml10 tal"> flex-direction: column <span class="fc4">.fcol</span></p>
+
+                    <p class="body3 fc3 ml10 mt10 tal"> justify-content: space-between <span class="fc4">.jcb</span></p>
+                    <p class="body3 fc3 ml10 tal"> justify-content: space-around <span class="fc4">.jca</span></p>
+                    <p class="body3 fc3 ml10 tal"> justify-content: flex-start<span class="fc4">.jcs</span></p>
+                    <p class="body3 fc3 ml10 tal"> justify-content: flex-center<span class="fc4">.jc</span></p>
+
+                    <p class="body3 fc3 ml10 mt10 tal"> align-content: center <span class="fc4">.acc</span></p>
+                    <p class="body3 fc3 ml10 tal"> align-content: end <span class="fc4">.ace</span></p>
+                    <p class="body3 fc3 ml10 tal"> align-content: space-between <span class="fc4">.acb</span></p>
+                    <p class="body3 fc3 ml10 tal"> align-content: start <span class="fc4">.acs</span></p>
+
+                    <p class="body3 fc3 ml10 mt10 tal"> align-items: start <span class="fc4">.fais</span></p>
+                    <p class="body3 fc3 ml10 tal"> align-items: end <span class="fc4">.faie</span></p>
+                    <p class="body3 fc3 ml10 tal"> align-items: center <span class="fc4">.faic</span></p>
+                    <p class="body3 fc3 ml10 tal"> align-items: stretch <span class="fc4">.fais</span></p>
+                    <p class="body3 fc3 ml10 tal"> align-items: baseline <span class="fc4">.faibc</span></p>
+
+                    <div class="w100 pt10 pb10"></div>
+
+                    <div class="row w100 mb10  jcs faic">
+                        <span class="material-icons fc4">square_foot</span>
+                        <p class="body3 fc4 tal ml10">Margin & padding</p>
+                    </div>
+
+                    <p class="body3 fc3 ml10 tal">Margin <span class="fc4">.m</span></p>
+                    <p class="body3 fc3 ml10 tal">Margin auto (center) <span class="fc4">.ma</span></p>
+                    <p class="body3 fc3 ml10 tal">Margin top <span class="fc4">.mt</span></p>
+                    <p class="body3 fc3 ml10 tal">Margin bottom <span class="fc4">.mb</span></p>
+                    <p class="body3 fc3 ml10 tal">Margin left <span class="fc4">.ml</span></p>
+                    <p class="body3 fc3 ml10 tal">margin right <span class="fc4">.mr</span></p>
+
+                    <p class="body3 fc3 ml10 tal mt10">Padding <span class="fc4">.p</span></p>
+                    <p class="body3 fc3 ml10 tal">Padding top<span class="fc4">.pt</span></p>
+                    <p class="body3 fc3 ml10 tal">Padding bottom<span class="fc4">.pb</span></p>
+                    <p class="body3 fc3 ml10 tal">Padding left<span class="fc4">.pl</span></p>
+                    <p class="body3 fc3 ml10 tal">Padding rigth<span class="fc4">.pr</span></p>
+
+                    <div class="w100 pt10 pb10"></div>
+
+                    <div class="row w100 mb10  jcs faic">
+                        <span class="material-icons fc4">radar</span>
+                        <p class="body3 fc4 tal ml10">Position</p>
+                    </div>
+
+                    <p class="body3 fc3 ml10 tal"> Position fixed <span class="fc4"> .pf</span></p>
+                    <p class="body3 fc3 ml10 tal"> Position relative <span class="fc4"> .pr</span></p>
+                    <p class="body3 fc3 ml10 tal"> Position absolute<span class="fc4"> .pa</span></p>
+
+                    <div class="w100 pt10 pb10"></div>
+
+                    <div class="row w100 mb10  jcs faic">
+                        <span class="material-icons fc4">spellcheck</span>
+                        <p class="body3 fc4 tal ml10">Text</p>
+                    </div>
+
+                    <p class="body3 fc3 ml10 tal"> Aling text center <span class="fc4"> .tac</span></p>
+                    <p class="body3 fc3 ml10 tal"> Aling text left <span class="fc4"> .tal</span></p>
+                    <p class="body3 fc3 ml10 tal"> Aling text rigth<span class="fc4"> .tar</span></p>
+                    <p class="body3 fc3 ml10 tal"> Aling text justify<span class="fc4"> .taj</span></p>
+
+                    <p class="body3 fc3 ml10 mt10 tal">text-transform: uppercase <span class="fc4">.mys</span></p>
+                    <p class="body3 fc3 ml10 tal">text-transform: lowercase <span class="fc4">.mns</span></p>
+                    <p class="body3 fc3 ml10 tal">text-transform: capitalize <span class="fc4">.taj</span></p>
+
+                    <p class="body3 fc3 ml10 tal mt10"> font-style italic<span class="fc4">.i</span></p>
+                    <p class="body3 fc3 ml10 tal"> font-style bold<span class="fc4">.b</span></p>
+                    <p class="body3 fc3 ml10 tal"> font-style lighter<span class="fc4">.l</span></p>
+
+                    <p class="body3 fc3 ml10 tal mt10"> font weight<span class="fc4">.fw</span></p>
+
+                    <div class="w100 pt10 pb10"></div>
+
+                    <div class="row w100 mb10  jcs faic">
+                        <span class="material-icons fc4">opacity</span>
+                        <p class="body3 fc4 tal ml10">Opacity</p>
+                    </div>
+
+                    <p class="body3 fc3 ml10 tal"> opacity <span class="fc4">.o</span></p>
+
+                    <div class="w100 pt10 pb10"></div>
+
+                    <div class="row w100 mb10  jcs faic">
+                        <span class="material-icons fc4">dynamic_feed</span>
+                        <p class="body3 fc4 tal ml10">Elevation</p>
+                    </div>
+
+                    <p class="body3 fc3 ml10 tal"> elevation <span class="fc4">.e</span></p>
+
+
+                    <div class="w100 pt10 pb10"></div>
+
+                    <div class="row w100 mb10  jcs faic">
+                        <span class="material-icons fc4">content_copy</span>
+                        <p class="body3 fc4 tal ml10">Border</p>
+                    </div>
+
+                    <p class="body3 fc3 ml10 tal"> Border - border opacity <span class="fc4">.br1-5</span></p>
+
+                    <div class="w100 pt10 pb10"></div>
+
+                    <div class="row w100 mb10  jcs faic">
+                        <span class="material-icons fc4">link</span>
+                        <p class="body3 fc4 tal ml10">Border Radius</p>
+                    </div>
+
+                    <p class="body3 fc3 ml10 tal"> Border radius <span class="fc4">.rd1</span></p>
+
+                    <div class="w100 pt10 pb10"></div>
+
+                    <div class="row w100 mb10  jcs faic">
+                        <span class="material-icons fc4">palette</span>
+                        <p class="body3 fc4 tal ml10">Color</p>
+                    </div>
+
+                    <p class="body3 fc3 ml10 tal"> with material colors <span class="fc4">.red-400</span></p>
+                    <p class="body3 fc3 ml10 tal"> with waves colors <span class="fc4">.bgc1</span></p>
+
+                </div>
+            </div>
+
+            <div class="layer hide" id="layer"></div>
+            <div class="boxclass w100 bgc1 hide" id="rigthpanel">
+
+                <div class="w80 ma mt50">
+
+
+
+                    <div class="body2 fc3 tac">Layout</div>
+                    <div class="w100 pointer mt20" onclick="b0()">
+                        <img src="img/blocks/b29.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b1()">
+                        <img src="img/blocks/b30.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b2()">
+                        <img src="img/blocks/b31.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b3()">
+                        <img src="img/blocks/b32.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b4()">
+                        <img src="img/blocks/b33.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="body2 fc3 tac mt20">Navigation</div>
+
+                    <div class="w100 pointer mt20" onclick="b5()">
+                        <img src="img/blocks/b34.PNG" alt="" class="img rd5">
+                    </div>
+
+
+                    <div class="w100 pointer mt20" onclick="b6()">
+                        <img src="img/blocks/b35.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b7()">
+                        <img src="img/blocks/b36.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b8()">
+                        <img src="img/blocks/b37.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b9()">
+                        <img src="img/blocks/b38.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b10()">
+                        <img src="img/blocks/b39.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="body2 fc3 tac mt20"> Covers</div>
+
+                    <div class="w100 pointer mt20" onclick="b11()">
+                        <img src="img/blocks/b2.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="body2 fc3 tac">code</div>
+                    <div class="w100 pointer mt20" style="border-radius: 8px; overflow: hidden;" onclick="b38()">
+
+                        <div class="block" id="code1">
+                            <header class="w100">
+                                <style>
+                                    .contbox {
+                                        background-image: url(img/Imagen3.png);
+                                        background-repeat: no-repeat;
+                                        background-position: right;
+                                        background-size: contain;
+                                    }
+
+                                    @media (max-width: 800px) {
+                                        .contimg1 {
+                                            display: none;
+                                        }
+
+                                        .contbox {
+                                            background-image: url();
+                                        }
+                                    }
+                                </style>
+                                <div class="row contbox mt80 mb80">
+                                    <div class="wx50 wl70 wm80 ws90 ">
+                                        <h4 class="fc2 pls30 pl80">Lorem Ipsum is simply</h4>
+                                        <h1 class="fc1 pt30 pts50 pls30 pl80 fw6">Lorem Ipsum is simply dummy text
+                                            printing </h1>
+                                        <div class="wx30 ws50 ml80 mls30 br1-1 tac mt80 mts60"
+                                            style="background-color: transparent; box-shadow: 0px 0px 12px rgba(173, 170, 229, 0.5);">
+                                            <a href="#" target="_blank">
+                                                <p class="body1 fc1 p18 fw5">Document</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+
+
+                    <div class="body2 fc3 tac mt20"> Content</div>
+
+                    <div class="w100 pointer mt20" onclick="b12()">
+                        <img src="img/blocks/b3.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b13()">
+                        <img src="img/blocks/b4.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b14()">
+                        <img src="img/blocks/b5.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b15()">
+                        <img src="img/blocks/b6.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b16()">
+                        <img src="img/blocks/b7.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b17()">
+                        <img src="img/blocks/b8.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b18()">
+                        <img src="img/blocks/b9.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b19()">
+                        <img src="img/blocks/b10.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b20()">
+                        <img src="img/blocks/b11.PNG" alt="" class="img rd5">
+                    </div>
+
+
+                    <div class="w100 pointer mt20" onclick="b27()">
+                        <img src="img/blocks/b18.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b28()">
+                        <img src="img/blocks/b19.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b29()">
+                        <img src="img/blocks/b20.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b30()">
+                        <img src="img/blocks/b21.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b31()">
+                        <img src="img/blocks/b22.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b32()">
+                        <img src="img/blocks/b23.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b33()">
+                        <img src="img/blocks/b24.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b34()">
+                        <img src="img/blocks/b25.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="body2 fc3 tac mt20"> Tables </div>
+
+                    <div class="w100 pointer mt20" onclick="b21()">
+                        <img src="img/blocks/b12.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="body2 fc3 tac mt20"> List </div>
+
+                    <div class="w100 pointer mt20" onclick="b22()">
+                        <img src="img/blocks/b13.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b23()">
+                        <img src="img/blocks/b14.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b35()">
+                        <img src="img/blocks/b26.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="body2 fc3 tac mt20"> Alerts </div>
+
+                    <div class="w100 pointer mt20" onclick="b24()">
+                        <img src="img/blocks/b15.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b25()">
+                        <img src="img/blocks/b16.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b26()">
+                        <img src="img/blocks/b17.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="body2 fc3 tac mt20"> Footer </div>
+
+                    <div class="w100 pointer mt20" onclick="b36()">
+                        <img src="img/blocks/b27.PNG" alt="" class="img rd5">
+                    </div>
+
+                    <div class="w100 pointer mt20" onclick="b37()">
+                        <img src="img/blocks/b28.PNG" alt="" class="img rd5">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class=" pf w100 jcb df bgc3 e2 " style="top: 0px; z-index: 3000; height: 44px;" id="topbar">
+
+        <div class="row w15" id="tabs">
+            <div class="w50 tac fc3 pointer active" onclick="leftpanellook()" id="panelbtnleft">
+                <div class="body2 p8" style="font-size: 13px;">
+                    Tools
+                </div>
+            </div>
+
+            <div class="w50 tac fc3 pointer" onclick="rightpanellook()" id="panelbtnrigth">
+                <div class="body2 p8" style="font-size: 13px;">
+                    Snnipets
+                </div>
+            </div>
+        </div>
+
+        <div class="row contbtns" id="btncont">
+
+            <div class="w2 pointer " id="codefullbnt" onclick="fullcode()">
+                <span class="material-icons p12 fc3" style=" font-size: 20px;"> code </span>
+            </div>
+
+            <div class="w2 pointer  hide" id="codeminbnt" onclick="retunrcode()">
+                <span class="material-icons p12 fc3" style=" font-size: 20px;"> clear </span>
+            </div>
+
+            <!-- previe function
+            <div class="w2 pointer ml15" id="prevbnt" onclick="prev()">
+                <span class="material-icons p12 fc3" style=" font-size: 20px;"> visibility </span>
+            </div>
+            -->
+
+
+            <div class="w2 mr5 pointer hide" id="btndesk" onclick="desk()">
+                <span class="material-icons p12 fc3" style=" font-size: 20px;"> monitor </span>
+            </div>
+
+            <div class="w2 mr5 pointer" id="btnmobil" onclick="mobil()">
+                <span class="material-icons p12 fc3" style=" font-size: 20px;"> phone_android </span>
+            </div>
+
+            <div class="w2 pointer " id="copybnt" onclick="copy()">
+                <span class="material-icons p12 fc3" style=" font-size: 20px;"> file_copy </span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- return function
+    <div class="w5 pointer hide pf" style="bottom: 10px; right: 10px;" id="retbnt" onclick="ret()">
+        <span class="material-icons p12 fc3" style=" font-size: 50px;"> reply </span>
+    </div>
+    -->
+
+    <script src="js/j-query.min.js"></script>
+    <script src="ace/ace.js" charset="utf-8"></script>
+    <script src="ace/ext-language_tools.js"></script>
+    <script src="ace/ext-emmet.js"></script>
+    <script src="ace/emmet-library.js"></script>
+    <!-- <script src="ace/app.js"></script> -->
+
+    <script src="js/main.js"></script>
+    <script src="js/fragments.js"></script>
+
+</body>
+
+</html>
